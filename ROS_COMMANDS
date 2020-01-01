@@ -1,0 +1,23 @@
+rostopic hz /orb_slam2_rgbd/pose /camera/depth_registered/points
+
+roslaunch realsense2_camera rs_rgbd.launch depth_fps:=30 color_fps:=30
+
+roslaunch orb_slam2_ros orb_slam2_d435_rgbd.launch
+roslaunch realsense2_camera rs_t265.launch
+roslaunch realsense2_camera rs_d400_and_t265.launc
+
+echo $ROS_IP
+192.168.1.41
+
+
+
+      <arg name="time"             value="3"/>
+
+D435:
+SN: 801212071262
+roslaunch realsense2_camera rs_camera.launch camera:=cam_1 serial_no:=801212071262 filters:=spatial,temporal,pointcloud
+
+T265:
+SN: 852212110509
+roslaunch realsense2_camera rs_camera.launch camera:=cam_1 serial_no:=852212110509 filters:=spatial,temporal,pointcloud
+
